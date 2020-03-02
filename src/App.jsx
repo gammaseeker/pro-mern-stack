@@ -1,3 +1,42 @@
+class IssueFilter extends React.Component{
+    render(){
+        return(
+            <div>placeholder for issue filter</div>
+        );
+    }
+}
+
+class IssueTable extends React.Component{
+    render(){
+        return(
+            <div>placeholder for issue table</div>
+        );
+    }
+}
+
+class IssueAdd extends React.Component{
+    render(){
+        return(
+            <div>placeholder for issue add</div>
+        );
+    }
+}
+
+class IssueList extends React.Component {
+    render() {
+      return (
+        <div>
+          <h1>Issue Tracker</h1>
+          <IssueFilter />
+          <hr />
+          <IssueTable />
+          <hr />
+          <IssueAdd />
+        </div>
+      );
+    }
+}
+
 class HelloWorld extends React.Component{
     render(){
         const continents = ['Africa', 'America', 'Asia', 'Australia', 'Europe'];
@@ -11,6 +50,7 @@ class HelloWorld extends React.Component{
         );
     }
 }
-const element = <HelloWorld />;
-
-ReactDOM.render(element, document.getElementById('contents'));
+//const element = <HelloWorld />;
+const contentNode = document.getElementById('contents');
+//ReactDOM.render(element, document.getElementById('contents'));
+ReactDOM.render(<IssueList />, contentNode);    // Render the component inside the content Node
